@@ -17,7 +17,6 @@ html, body{
 }
 
 .h1_wrap{
-    position: static;
     width: 142px; height: 80px;
     float: left;
     top: 0; left: 0;
@@ -26,13 +25,14 @@ html, body{
     border-bottom: none;
 }
 
-h1{
-    position: static;
+.h1_wrap > h1{
+    position: relative;
     width:100%;
     height:100%;
 }   
 
-h1 > a {
+.h1_wrap > h1 > a {
+    position: absolute;
     display: block;
     text-align: center;
     width: 100%;
@@ -107,19 +107,21 @@ h1 > a {
 /* section1 */
 
 .section{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 800px;
+    height: 900px;
 }
 
 .section1{
     width: 100%;
     background: url(../image/main_cover_대지\ 1.jpg) no-repeat center/cover;
-    padding: 200px 0;
+    padding: 180px 0;
 }
 
 .sec1_wrap{
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 
 }
@@ -129,6 +131,7 @@ h1 > a {
     /* height: 200px; */
     /* margin-top: 100px; */
     float: left;
+    font-size: 16px;
 }
 
 .sec1_text h3:after {
@@ -143,94 +146,57 @@ h1 > a {
 }
 
 .sec1_text h3{
-    font-size: 4.5em;
-    margin-bottom: 60px;
-    line-height: 100px;
+    font-size: 3em;
+    margin-bottom: 50px;
+    line-height: 90px;
     color: #fff;
 }
 
 .sec1_text p{
-    width: 70%;
-    font-size: 15px;
+    width: 75%;
+    font-size: 1em;
     font-weight: 500;
     line-height: 30px;
     color: #fff;
 }
 
+.sec1_text p button{
+    width: 160px;
+    height: 65px;
+    margin-top: 30px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #fff;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+}
+
 /* sec2 */
 
 .sec2-1 {
-    width: 60%;
-    height: 200px;
-    margin-top: 200px;
-    float: right;
-  }
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 30px;
+    border: 2px outset #ddd;
+    border-radius: 300px;
+}
 
-  .sec2-1 h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
+.sec2-1 h3 {
+    font-size: 3.5em;
+    color: #888;
+}
+
+.sec2-1 img{
+    margin: 20px 0 0px 50px;
+    float: left;
+    width: 300px;
+}
 
 
 /* section3 */
 
-.slide_title{
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    /* border: 1px solid #333; */
-    margin-top: 110px;
-    line-height: 50px;
-    text-align: center;
-}
-
-.slide_title h3{
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.slider{
-    width: 40%;
-    padding: 180px 0 0 0 ;
-    margin: 0px auto;
-    /* border: 5px solid #333; */
-    position: relative;
-}
-
-img {
-    width: 100%;
-    cursor: pointer;
-    padding: 10px;
-}
-
-  
-.prev{
-    width: 30px;
-    height: 30px;
-    background: url(../arrow/left-arrow.png) no-repeat center/cover;
-    cursor: pointer;
-
-    position: absolute;
-    bottom: 40%; left: -20%;
-    transform: translateY(50%);
-
-}
-
-.next{
-    width: 30px;
-    height: 30px;
-    background: url(../arrow/right-arrow.png) no-repeat center/cover;
-    cursor: pointer;
-
-    position: absolute;
-    bottom: 40%; right: -20%;
-    transform: translateY(50%);
-
-}
-
-.slick-dots li{
-    width: 25px !important;
-}
 
 .section4{
     background: #eee;
