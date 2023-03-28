@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollpage</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav_wrap{
+            width: 100%;
+            height: 50px;
+            background: aliceblue;
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 100;
+        }
+
+        .gnb{
+            width: 400px;
+            height: 50px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+
+        .gnb > li {
+            float: left;
+        }
+
+        .gnb > li > a{
+            display: block;
+            width: 100px;
+            height: 50px;
+            /* background: orange; */
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .section{
+            width: 100%;
+            height: 1000px;
+            text-align: center;
+            line-height: 1000px;
+            font-size: 100px;
+
+        }
+
+        .section1{
+            background: #eee;
+        }
+        .section2{
+            background: #ddd;
+        }
+        .section3{
+            background: #ccc;
+        }
+        .section4{
+            background: #bbb;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="nav_wrap">
+        <ul class="gnb">
+          <li><a href="#section1">section1</a></li>
+          <li><a href="#section2">section2</a></li>
+          <li><a href="#section3">section3</a></li>
+          <li><a href="#section4">section4</a></li>
+        </ul>
+      </nav>
+    
+      <section class="section section1" id="section1">section1</section>
+      <section class="section section2" id="section2">section2</section>
+      <section class="section section3" id="section3">section3</section>
+      <section class="section section4" id="section4">section4</section>
+
+      <script src="js/jquery-3.6.3.min.js"></script>
+      <script src="js/jquery.mousewheel.min.js"></script>
+
+      <script>
+
+        $(document).ready(function(){
+
+            $('.gnb > li > a').click(function(){
+
+                // let n = $(this).parent().index();
+                // // console.log(n)
+
+                // $('html').animate({scrollTop: 1000 * n}, 500);
+                // let link = $(this).attr('href')
+                // // console.log(link)
+                // let n = $(link).offset().top
+
+                // $('html').animate({scrollTop: n })
+
+                let n = $(this).parent().index();
+                let section_ot = $('.section').eq(n).offset().top
+
+                $('html').animate({scrollTop: section_ot})
+
+            })
+
+            $(window).scroll(function(){
+                let win_top = $(window).scrollTop();
+                // console.log(win_top)
+                if(win_top >= 100){
+                    $('.nav_wrap').css({background: 'powderblue'})
+                }
+            })
+
+            $('.section').mousewheel(function(e, delta){
+
+                if( $('html').is(':animated') ){
+                    return false;
+                }
+
+                if(delta > 0){
+
+                    let prev_ot = $(this).prev().offset().top
+
+                    $('html').animate({scrollTop: prev_ot}, 400)
+
+                } else if(delta < 0){
+                    let next_ot = $(this).next().offset().top
+
+                    $('html').animate({scrollTop: next_ot}, 800)
+                }
+
+            })
+
+        })
+
+      </script>
+</body>
+</html>
