@@ -1,0 +1,72 @@
+@import "compass/css3";
+
+.menu-left a {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0px;
+    transition: color .35s ease;
+    &:before {
+      content: '';
+      display:block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      transition: width 0s ease, background .35s ease;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background: $text-color;
+      transition: width .35s ease;
+    }
+    &:hover:before {
+      width: 100%;
+      background: $text-color;
+      transition: width .35s ease;
+    }
+    &:hover:after {
+      width: 100%;
+      background: transparent;
+      transition: all 0s ease;
+    }
+  }
+  
+  .nav-toggle {
+    display: block;
+    border-radius: 5px;
+    background-color: transparent;
+    float: right;
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+    padding: 8px 8px;
+    &.open span:first-child {
+      transform: rotate(45deg) translate(4.4px, 4.4px);
+    }
+    &.open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+    &.open span:last-child {
+      transform: rotate(-45deg) translate(4.4px, -4.4px);
+    }
+    @include breakpoint($md) {
+      display: none;
+    }
+    span {
+      position: relative;
+      display: block;
+      height: 2px;
+      width: 100%;
+      margin-top: 4px;
+      background-color: $text-color;
+      transition: all .25s;
+    }
+  }

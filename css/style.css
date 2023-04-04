@@ -5,66 +5,56 @@ html, body{
     width: 100%;
 }
 
+
 /* menu */
 
 .menu{
-    /* border: 1px solid red; */
     width: 100%;
     height: 80px;
     position: fixed;
     top: 0; left: 0;
-    z-index: 80;
+    z-index: 50;
+}
+
+.header{
+    width: 100%;
+    margin: 0 auto;
 }
 
 .h1_wrap{
-    width: 142px; height: 80px;
+    position: absolute;
+    padding-left: 20px;
     float: left;
-    top: 0; left: 0;
     z-index: 100;
-    /* border: 1px solid red; */
-    border-bottom: none;
 }
 
-.h1_wrap > h1{
-    position: relative;
-    width:100%;
-    height:100%;
-}   
-
-.h1_wrap > h1 > a {
-    position: absolute;
+.h1_wrap > h1 > a{
     display: block;
     text-align: center;
-    width: 100%;
-    height: 100%;
     line-height: 80px;
     font-size: 1.4em;
     color: #fff;
 }
 
 .gnb_wrap{
-    width: 100%;
-    height:100%;
-    margin: 0 auto;
-    text-align: center;
+    float: right;
 }
 
 .gnb{
-    width: 600px;
-    position: absolute;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    /* border: 1px solid black; */
+    list-style: none;
+    margin: 0; padding: 0;
+    
 }
 
 .gnb > li{
     float: left;
-    display: block;
+    padding-right: 20px;
+    position: relative;
+    z-index: 100;
 }
 
-.gnb > li > a{
-    display: inline-block;
+.gnb > li >a {
+    display: block;
     width: 150px;
     height: 80px;
     text-align: center;
@@ -73,7 +63,6 @@ html, body{
     font-size: 18px;
     transition: all 0.4s;
     color: #fff;
-    /* border: 1px solid black; */
 }
 
 .gnb > li > a:hover{
@@ -83,14 +72,11 @@ html, body{
     font-weight: bold;
 }
 
-.lnb{
-    display: none;
-}
-
 .lnb a{
     display: block;
     width: 100%;
     height: 40px;
+    text-align: center;
     line-height: 40px;
     transition: all 0.5s;
     font-size: 14px;
@@ -99,10 +85,15 @@ html, body{
 
 .lnb a:hover{
     background: #eee;
-    color: #111;
+    color:  #dd4e1a;
     font-size: 16px;
     font-weight: bold;
 }
+
+input[id="m_btn"]{
+    display: none;
+}
+
 
 /* section1 */
 
@@ -128,15 +119,12 @@ html, body{
 
 .sec1_text{
     width: 100%;
-    /* height: 200px; */
-    /* margin-top: 100px; */
     float: left;
     font-size: 16px;
 }
 
 .sec1_text h3:after {
     content: "";
-    /* display: inline-block; */
     display: block;
     width: 17px;
     height: 17px;
@@ -195,7 +183,6 @@ html, body{
 }
 
 
-/* section3 */
 
 
 .section4{
