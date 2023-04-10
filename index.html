@@ -56,14 +56,14 @@
                     </li>
                     <!-- 04 -->
                 </ul>
-                <input type="checkbox" id="m_btn">
-                <label for="m_btn">
+            
+            </div>
+            <input type="checkbox" id="m_btn">
+                <label for="m_btn" id="toggle">
                     <span></span>
                     <span></span>
                     <span></span>
                 </label>
-            
-            </div>
         </header>
     </div>
 
@@ -103,21 +103,21 @@
     <section class="section section3" id="section3">
         <!-- slider -->
         <div class="slide_title" data-aos="fade-up" data-aos-offset="400">
-
+            <h3>.</h3>
         </div>
     
     </section>
     <section class="section section4" id="section4">
         <!-- slider -->
         <div class="slide_title" data-aos="fade-up" data-aos-offset="400">
-            <h3></h3>
+        <h3>.</h3>
         </div>
       
     </section>
     <section class="section section5" id="section5">
         <div class="sec4-1" data-aos="fade-up"
         data-aos-offset="400">
-            <h3></h3>
+            <h3>.</h3>
         </div>
     </section>
 
@@ -135,9 +135,14 @@
 
     <script>
 
+        $('#toggle').click(function() {
+            $(this).toggleClass('active');
+            $('#nav').toggleClass('open');
+        });
+
         $(document).ready(function(){
 
-            // sec1
+            // scroll
 
             $('.gnb > li > a').click(function(){
 
@@ -146,13 +151,6 @@
 
                 $('html').animate({scrollTop: section_ot})
 
-            })
-            
-
-            $('.gnb > li').hover(function(){    
-                $(this).find('.lnb').stop().slideDown()
-            }, function(){
-                $(this).find('.lnb').stop().slideUp()
             })
 
             $(window).scroll(function(){
@@ -187,6 +185,14 @@
 
                 
 
+            })
+
+            // menu slide
+            $('.lnb').hide();
+            $('.gnb > li').hover(function(){    
+                $(this).find('.lnb').stop().slideDown()
+            }, function(){
+                $(this).find('.lnb').stop().slideUp()
             })
 
             // sec3
