@@ -9,9 +9,9 @@ html, body{
 /* menu */
 
 .menu{
+    position: absolute;
     width: 100%;
     height: 80px;
-    position: fixed;
     top: 0; left: 0;
     z-index: 50;
 }
@@ -137,7 +137,7 @@ html, body{
 }
 
 .sec1_text h3{
-    font-size: 3em;
+    font-size: 45px;
     margin-bottom: 50px;
     line-height: 90px;
     color: #fff;
