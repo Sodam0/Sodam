@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 html, body{
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR',
+    sans-serif;
+    font-size: 16px;
     width: 100%;
 }
 
@@ -9,7 +11,7 @@ html, body{
 /* menu */
 
 .menu{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 80px;
     top: 0; left: 0;
@@ -32,7 +34,7 @@ html, body{
     display: block;
     text-align: center;
     line-height: 80px;
-    font-size: 1.4em;
+    font-size: 1em;
     color: #fff;
 }
 
@@ -111,40 +113,33 @@ html, body{
 .section1{
     width: 100%;
     background: url(../image/main_cover_대지\ 1.jpg) no-repeat center/cover;
-    padding: 180px 0;
+    padding: 170px 0;
 }
 
 .sec1_wrap{
     width: 80%;
     margin: 0 auto;
-
-}
-
-.sec1_text{
-    width: 100%;
-    float: left;
-    font-size: 16px;
 }
 
 .sec1_text h3:after {
     content: "";
     display: block;
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
     border-radius: 9px;
-    margin: 35px 0 0 10px;
+    margin: 30px 0 0 10px;
     background-color: #fff;
 }
 
 .sec1_text h3{
-    font-size: 45px;
+    font-size: 2.5em;
     margin-bottom: 50px;
-    line-height: 90px;
+    line-height: 80px;
     color: #fff;
 }
 
 .sec1_text p{
-    width: 75%;
+    width: 80%;
     font-size: 1em;
     font-weight: 500;
     line-height: 30px;
