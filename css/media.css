@@ -157,12 +157,14 @@
 
     /* section */
     .section{
+        
         height: calc(100vh - 50px);
+
     }
 
     /* sec1 */
-    .section1{
-        padding: 100px 0;
+    .sec1_wrap{
+        transform: translateY(-10%);
     }
 
     .sec1_text{
@@ -171,7 +173,7 @@
     }
 
     .sec1_text h3:after {
-        
+        visibility: hidden;
     }
     
     .sec1_text h3{
