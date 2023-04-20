@@ -1,8 +1,8 @@
 
 #ani {
   letter-spacing: 5px;
-  background: -o-linear-gradient(45deg,#ff8a00,#e52e71,#ac0808,#a900ca);
-  background: linear-gradient(45deg,#ff8a00,#e52e71,#ac0808,#a900ca);
+  background: -o-linear-gradient(45deg,#ffb45f,#ff78aa,#6756ff,#e873ff);
+  background: linear-gradient(45deg,#ffb45f,#ff78aa,#6756ff,#e873ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300% 300%;
