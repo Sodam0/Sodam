@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/btn.scss">
-    <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/h3gra.css">
 
@@ -144,7 +142,7 @@
             $(this).toggleClass('active');
             $('#nav').toggleClass('open');
         });
-
+        
         $(document).ready(function(){
 
             // scroll
@@ -156,11 +154,13 @@
 
                 $('html').animate({scrollTop: section_ot})
 
+                $('#nav').toggleClass('open');
+
             })
 
             $(window).scroll(function(){
                 let win_top = $(window).scrollTop();
-                // console.log(win_top)
+                console.log(win_top)
                 if(win_top >= 100){
                     $('.menu').css({
                         background: '#333'
@@ -173,7 +173,7 @@
             $('.section').mousewheel(function(e, delta){
 
                 if( $('html').is(':animated') ){
-                    return false;
+                    return;
                 }
 
                 if(delta > 0){

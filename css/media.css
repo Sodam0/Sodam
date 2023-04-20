@@ -98,7 +98,6 @@
         width: 100%;
         float: left;
         z-index: 100;
-        line-height: 80px;
         position: relative;
         height: calc(100% / 4);
         opacity: 0;
@@ -111,6 +110,8 @@
         text-decoration: none;
         overflow: hidden;
         transition: all 0.4s;
+        margin-top: 20px;
+        line-height: 70px;
     }
 
     .gnb > li > a:hover{
@@ -135,15 +136,20 @@
         transition: 0.35s;
     }
 
+    .lnb li {
+        height: 50px;
+    }
+
     .lnb a{
         display: block;
-        height: 55px;
+        height: 50px;
         color: #fff;
-        line-height: 60px;
         transition: all 0.5s;
         font-size: 15px;
         font-weight: 400;
+        line-height: 50px;
     }
+
     .lnb a:hover{
         background: #eee;
         color:  #dd4e1a;
