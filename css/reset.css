@@ -22,6 +22,7 @@ body {
     height: 100%;
     overflow-y: auto;
     min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
 	font-family: 'Spoqa Han Sans';
 	line-height: 1;
     -webkit-font-smoothing: antialiased;
