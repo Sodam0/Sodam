@@ -116,7 +116,13 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
+                <div class="p_my">
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                </div>
             </div>
+            
             <div class="profile_Skill"
             data-aos="fade-left" data-aos-duration="2000">
                 <h4>Skill</h4>
@@ -222,40 +228,6 @@
             $(this).toggleClass('active');
             $('#nav').toggleClass('open');
         });
-
-        // graph
-        let number1 = document.getElementById("g_num1");
-        let counter1 = 0;
-        setInterval(() => {
-            if(counter1 == 80){
-                clearInterval();
-            }else{
-                counter1 += 1;
-                number1.innerHTML = counter1 + "%";
-            }
-        }, 20);
-
-        let number2 = document.getElementById("g_num2");
-        let counter2 = 0;
-        setInterval(() => {
-            if(counter2 == 55){
-                clearInterval();
-            }else{
-                counter2 += 1;
-                number2.innerHTML = counter2 + "%";
-            }
-        }, 20);
-
-        let number3 = document.getElementById("g_num3");
-        let counter3 = 0;
-        setInterval(() => {
-            if(counter3 == 25){
-                clearInterval();
-            }else{
-                counter3 += 1;
-                number3.innerHTML = counter3 + "%";
-            }
-        }, 40);
         
         $(document).ready(function(){
 
@@ -303,6 +275,40 @@
                 }
 
                 
+                let number1 = document.getElementById("g_num1");
+                let counter1 = 0;
+                setInterval(() => {
+                    if(counter1 == 80){
+                        clearInterval();
+                    }else{
+                        counter1 += 1;
+                        number1.innerHTML = counter1 + "%";
+                    }
+                }, 20);
+
+                let number2 = document.getElementById("g_num2");
+                let counter2 = 0;
+                setInterval(() => {
+                    if(counter2 == 55){
+                        clearInterval();
+                    }else{
+                        counter2 += 1;
+                        number2.innerHTML = counter2 + "%";
+                    }
+                }, 20);
+
+                let number3 = document.getElementById("g_num3");
+                let counter3 = 0;
+                setInterval(() => {
+                    if(counter3 == 25){
+                        clearInterval();
+                    }else{
+                        counter3 += 1;
+                        number3.innerHTML = counter3 + "%";
+                    }
+                }, 40);
+
+                
 
             })
 
@@ -313,11 +319,13 @@
             }, function(){
                 $(this).find('.lnb').stop().slideUp()
             })
+            
 
 
             // sec3
 
         })
+        
     </script>
 </body>
 </html>
