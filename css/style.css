@@ -265,7 +265,7 @@
     }
 
     .profile_text{
-        width: 60%;
+        width: 65%;
         position: absolute;
         top: 0%;
         right: 0%;
@@ -274,7 +274,7 @@
     .p_my{
         display: inline-block;
         padding: 10px;
-        margin-right: 10px;
+        margin-right: 20px;
     }
 
     .p_my h4{
@@ -284,11 +284,20 @@
 
     }
 
+    .p_my p{
+        font-size: 1.2rem;
+        line-height: 25px;
+    }
+
+    .p_my strong{
+        margin-right: 15px;
+    }
+
     .profile_Skill{
-        width: 60%;
+        width: 65%;
         height: 40%;
         position: absolute;
-        bottom: 10%;
+        bottom: 5%;
         right: 0%;
     }
 
@@ -316,5 +325,10 @@
     
     .section3{
         background: #eee;
+    }
+
+    /* sec5 */
+    .section5{
+        width: 800px;
     }
 }
