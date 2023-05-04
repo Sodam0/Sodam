@@ -313,7 +313,7 @@
         color: #444;
         font-size: 1.8rem;
         padding: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .skill_list{
@@ -369,16 +369,37 @@
         background: #eee;
     }
 
+    /* sec4 */
+    .section4{
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
     /* sec5 */
     .section5{
         height: 800px;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
+        position: relative;
     }
 
-    .section5 h3{
-        
+    .sec4-1{
+        display: block;
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        bottom: 0%;
+        background: #eee;
+        text-align: center;
+    }
+
+    .sec4-1 h3{
+        color: #444;
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-bottom: 20px;
     }
 }
