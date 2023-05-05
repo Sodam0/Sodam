@@ -40,10 +40,15 @@
 }
   
 .card .face.face1 .content h3{
+    font-family: 'Poppins', sans-serif;
     font-size: 2.4rem;
     color:#fff;
     text-align:center;
     margin-top: 20%;
+}
+
+.card .face.face1 .content h3 span{
+    font-size: 1.8rem;
 }
   
 .card:hover .face.face1 .content{
