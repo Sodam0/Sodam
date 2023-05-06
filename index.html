@@ -332,7 +332,7 @@
             
             $('.section').mousewheel(function(e, delta){
 
-                if( $('html').is(':animated') ){
+                if( $('html,body').is(':animated') ){
                     return;
                 }
 
@@ -340,12 +340,12 @@
 
                     let prev_ot = $(this).prev().offset().top
 
-                    $('html').animate({scrollTop: prev_ot}, 400)
+                    $('html,body').animate({scrollTop: prev_ot}, 500)
 
                 } else if(delta < 0){
                     let next_ot = $(this).next().offset().top
 
-                    $('html').animate({scrollTop: next_ot}, 800)
+                    $('html,body').animate({scrollTop: next_ot}, 1000)
                 }
 
                 
