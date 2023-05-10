@@ -339,16 +339,14 @@
         
     }
 
-    .sec3_wrap{
+    /* .sec3_wrap{
         width: 100%;
         /* border: 1px solid #555; */
-        text-align: center;
-    }
+        /* text-align: center;
+    } */
     
-    .sec3_wrap h3 {
+    .s3_title {
         font-size: 3.2rem;
-        float: left;
-        margin-bottom: 30px;
         line-height: 3.7rem;
     }
 
@@ -389,10 +387,6 @@
         align-items: center;
         width: 80%;
         margin: 0 auto;
-    }
-
-    .sec4_wrap{
-
     }
 
     .s4_title{
