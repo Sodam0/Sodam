@@ -360,11 +360,13 @@
                     let prev_ot = $(this).prev().offset().top
 
                     $('html, body').animate({scrollTop: prev_ot}, 400)
+                    return false;
 
                 } else if(delta < 0){
                     let next_ot = $(this).next().offset().top
 
                     $('html, body').animate({scrollTop: next_ot}, 800)
+                    return false;
                 }
 
                 
