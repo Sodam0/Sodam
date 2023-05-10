@@ -349,7 +349,7 @@
                 }
             })
             
-            $('.section').mousewheel(function(e, delta){
+            $('.section').on("mousewheel",function(e, delta){
 
                 if( $('html, body').is(':animated') ){
                     return false;
