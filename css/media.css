@@ -24,7 +24,7 @@
 
     .menu{
         position: fixed;
-        width: 100%;
+        width: 100vw;
         height: 80px;
         top: 0; left: 0;
         z-index: 50;
@@ -116,7 +116,7 @@
 
     .gnb > li > a:hover{
         background: #fff;
-        color: #dd4e1a;
+        color: #8577ff;
         font-size: 20px;
         font-weight: bold;
     }
@@ -152,7 +152,7 @@
 
     .lnb a:hover{
         background: #eee;
-        color:  #dd4e1a;
+        color:  #8577ff;
         font-size: 17px;
         font-weight: bold;
     }
@@ -178,9 +178,9 @@
             width: 12px;
             height: 12px;
             transform: rotate(45deg);
-            border-right: 3px solid red;
+            border-right: 3px solid #8577ff;
             border-radius: 2px;
-            border-bottom: 3px solid red;
+            border-bottom: 3px solid #8577ff;
             animation: arrow-wave 1s infinite;
             animation-direction: alternate;
         }
@@ -267,7 +267,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: calc(100vh - 50px);
+        height: 100vh;
     }
 
     /* sec1 */
@@ -276,6 +276,8 @@
         background: #222;
         /* padding: 160px 0; */
     }
+
+    
 
     .sec1_wrap{
         width: 80%;
@@ -352,18 +354,51 @@
     /* sec2 */
 
     .section2{
+        justify-content: center;
+        align-items: center;
         width: 80%;
         margin: 0 auto;
-    
     }
 
-    .sec2-1 h3 {
+    .sec2_wrap h3 {
         font-size: 3.5em;
-        color: #888;
+        margin-bottom: 30px;
+    }    
+    .sec2_wrap h3::after{
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin: 0px 0px 0px 10px;
+        border-radius: 9px;
+        background-color: #8577ff;
     }
 
-    .sec2-1 img{
-        width: 300px;
+    .sec2_wrap img{
+        width: 150px;
+        height: 210px;
     }
+
+    .profile_Skill{
+        display: none;
+    }
+
+    .profile_Main{
+        display: inline-block;
+        width: 30%;
+        margin: 10px;
+        /* border: 1px solid red; */
+    }
+
+    .section3{
+        visibility: hidden;
+    }
+    .section4{
+        visibility: hidden;
+    }
+    .section5{
+        visibility: hidden;
+    }
+
 
 }
