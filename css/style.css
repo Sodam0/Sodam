@@ -234,7 +234,6 @@
 
     .sec2_wrap{
         width: 100%;
-        /* border: 1px solid #555; */
     }
     
     .sec2_wrap h3 {
@@ -347,7 +346,7 @@
     
     .s3_title {
         font-size: 3.2rem;
-        line-height: 3.7rem;
+        /* line-height: 3.7rem; */
     }
 
     .s3_title:after {
@@ -358,23 +357,6 @@
         margin: 0px 0px 0px 10px;
         border-radius: 9px;
         background-color: #8577ff;
-    }
-
-    .sec3_s{
-        display: inline-block;
-        margin: 50px 20px 20px 20px;
-        width: 180px;
-        height: 450px;
-        background: #ddd;
-        /* border: 1px solid red; */
-    }
-
-    .sec3_s p {
-        text-align: center;
-        line-height: 450px;
-        font-weight: 600;
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.8rem;
     }
 
     .sec3_s:hover{

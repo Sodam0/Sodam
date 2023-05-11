@@ -2,7 +2,8 @@
 
 .container{
     position:relative;
-    width:1000px;
+    width:1100px;
+    height: 450px;
     display:flex;
     margin: 0 auto;
     align-items: center;
@@ -10,13 +11,13 @@
 }
   
 .card .face{
-    height:250px;
-    width:200px;
-    transition:0.5s;
+    height:300px;
+    width:240px;
+    transition:0.6s;
+    margin: 0 20px 0 20px;
 }
   
 .card .face.face1{
-    /* margin-top: 50px; */
     position:relative;
     background:#444;
     display:flex;
@@ -24,11 +25,26 @@
     border-radius: 20px;
     align-items:center;
     z-index:1;
-    transform:translateY(150px);
+    transform:translateY(200px);
 }
   
   
-.card:hover .face.face1{
+.card:nth-child(1):hover .face.face1{
+    background:#f71f1f;
+    height: 100px;
+    transform:translateY(0);
+}
+.card:nth-child(2):hover .face.face1{
+    background:#2f90ff;
+    height: 100px;
+    transform:translateY(0);
+}
+.card:nth-child(3):hover .face.face1{
+    background:#16d394;
+    height: 100px;
+    transform:translateY(0);
+}
+.card:nth-child(4):hover .face.face1{
     background:#8577ff;
     height: 100px;
     transform:translateY(0);
@@ -54,16 +70,26 @@
 }
   
 .card .face.face2{
-    height: 220px;
+    height: 240px;
     position:relative;
-    background:#353250;
-    padding: 35px 20px 30px 20px;
+    background:#503232;
+    padding: 30px;
     display:flex;
     justify-content:center;
     box-sizing:border-box;
     border-radius: 0 0px 20px 20px;
     box-shadow:0 20px 20px rgba(0,0,0,0.3);
-    transform:translateY(-80px);
+    transform:translateY(-50px);
+}
+
+.card:nth-child(2) .face.face2{
+    background:#324050;
+}
+.card:nth-child(3) .face.face2{
+    background:#32504b;
+}
+.card:nth-child(4) .face.face2{
+    background:#353250;
 }
   
 .card:hover .face.face2{
@@ -72,8 +98,8 @@
   
 .card .face.face2 p{
     color: #fff;
-    font-size: 1.1rem;
-    line-height: 2rem;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
     padding:0;
     margin:0;
 }
@@ -97,23 +123,23 @@
 /* 프로젝트 카드 */
   
 .card_wrapper {
-    width: 300px;
+    width: 250px;
     transition: transform 0.5s;
     position: relative;
-    height: 400px;
-    border: 1px solid red;
+    height: 320px;
     border-radius: 6px;
     background: #E4F2F9;
     display: inline-flex;
     /* flex-direction: row; */
     margin: 20px;
-    background-image: url("https://cdn.dribbble.com/users/77760/screenshots/2042501/potato.jpg");
+    background-image: url("/image/portpolio\ screenshot.png");
+    /* background-position: center; */
     background-size: contain;
     background-repeat: no-repeat;
 }
   
 a:nth-child(2) .card_wrapper {
-    background-image: url("https://cdn.dribbble.com/users/4605/screenshots/1757843/snap.png");
+    background-image: url("/image/portpolio\ screenshot.png");
 }
   
 a:nth-of-type(3) .card_wrapper {
@@ -125,10 +151,12 @@ a:nth-of-type(4) .card_wrapper {
 }
   
 .project_summary {
-    margin-top: 260px;
+    height: 18vh;
+    margin-top: 200px;
     position: relative;
     padding: 0 20px;
     background: #fff;
+    border: 1.5px solid #ddd;
     flex: 1;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;

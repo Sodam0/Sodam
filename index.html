@@ -71,15 +71,18 @@
         <div class="sec1_wrap clearfix">
             <div class="sec1_text" data-aos="fade-up"
             data-aos-duration="1500">
-                <h3 id="ani">
+                <h3 id="ani" data-aos="fade-up"
+                data-aos-delay="300">
                     Hello!
                     <br>
                     Portpolio Sodaeun
                 </h3>
-                <p>안녕하세요! <br> "매일 성장하는" 웹 개발자 소다은입니다.<br>
+                <p data-aos="fade-up"
+                data-aos-delay="500">안녕하세요! <br> "매일 성장하는" 웹 개발자 소다은입니다.<br>
                     배움과 성장을 꾸준히 기록하는 저의 GitHub도 소개드리겠습니다.
                     <br>
-                    <button type="button" onclick="window.open('https://github.com/Sodam0') ">> GitHub로 이동</button>
+                    <button type="button" onclick="window.open('https://github.com/Sodam0') " data-aos="fade-up"
+                    data-aos-delay="900">> GitHub로 이동</button>
                 </p>
             </div>
         </div>
@@ -90,15 +93,15 @@
         data-aos-duration="1500">
             <h3>About Me</h3>
             <img src="image/profile.png" alt="" data-aos="fade-up"
-            data-aos-duration="1500">
+            data-aos-delay="300">
             <div class="profile_Main">
                 <div class="p_Name" data-aos="fade-up"
-                data-aos-duration="1500">
+                data-aos-delay="500">
                     <h4>소다은</h4>
                     <p> 안녕하세요. 저는 웹디자인을 공부하면서 명료하고 정확한 데이터를 보여줄 수 있는 개발에 관심을 가지게 되었습니다. <br> 새로 공부한 내용을 매일 Github에 리마인드하듯이 업로드하며 자기계발을 하고 있습니다.</p>
                 </div>
             </div>
-            <div class="profile_text" data-aos="fade-left" data-aos-duration="2000">
+            <div class="profile_text" data-aos="fade-left" data-aos-delay="300">
                 <div class="p_my">
                     <h4>학력</h4>
                     <p><strong>2019.03 ~ 2023.02</strong>  남서울대학교 시각정보디자인학과</p>
@@ -118,7 +121,7 @@
             </div>
             
             <div class="profile_Skill"
-            data-aos="fade-left" data-aos-duration="2000">
+            data-aos="fade-left" data-aos-delay="400">
                 <h4 data-aos="fade-left" data-aos-duration="1500">Skill</h4>
                 <div class="g_skill">
                     <div class="g_outer">
@@ -139,7 +142,7 @@
                     </svg>
                     <p class="skill_list">PSD / AI / HTML / CSS</p>
                 </div> <!-- graph1 -->
-                <div class="g_skill" data-aos="fade-left" data-aos-duration="2000">
+                <div class="g_skill" data-aos="fade-left" data-aos-duration="1000">
                     <div class="g_outer">
                         <div class="g_inner">
                             <div id="g_num2">
@@ -220,7 +223,7 @@
                     <div class="face face2">
                         <div class="content">
                             <p>그래픽을 드로잉하여 웹에 사용자와 상호작용이 가능한 콘텐츠를 만들고 데이터를 저장하고 기록하여 웹에 활용할 수 있습니다.</p>
-                            <a href="#section4">Read More</a>
+                            <a href="#section1">Read More</a>
                         </div>
                     </div>
                 </div>    <!-- card3 -->
@@ -254,11 +257,11 @@
                     </div>
                 </article>
             </a><!-- 포폴 -->
-            <a href="https://sodam0.github.io/">
+            <a href="http://sodadam.dothome.co.kr/">
                 <article class="card_wrapper">
                     <div class="project_summary">
-                        <h2 class="project_title">Dam Portpolio</h2>
-                        <p class="created_date">Created: 2023 / 05</p>
+                        <h2 class="project_title">Todo List</h2>
+                        <p class="created_date">Created: 2023 / 04</p>
                         <p class="project_desc">Minimalistic website showing Idaho's famous golden potatoes.</p>
                     </div>
                 </article>
@@ -272,6 +275,15 @@
                     </div>
                 </article>
             </a><!-- 프로젝트 2 -->
+            <a href="https://sodam0.github.io/">
+                <article class="card_wrapper">
+                    <div class="project_summary">
+                        <h2 class="project_title">Dam Portpolio</h2>
+                        <p class="created_date">Created: 2023 / 05</p>
+                        <p class="project_desc">Minimalistic website showing Idaho's famous golden potatoes.</p>
+                    </div>
+                </article>
+            </a><!-- 프로젝트 3 -->
             
         </div>
     </section>
@@ -351,25 +363,6 @@
             
             $('.section').on("mousewheel",function(e, delta){
 
-                if( $('html, body').is(':animated') ){
-                    return false;
-                }
-
-                if(delta > 0){
-                    
-                    let prev_ot = $(this).prev().offset().top
-
-                    $('html, body').animate({scrollTop: prev_ot}, 400)
-                    return false;
-
-                } else if(delta < 0){
-                    let next_ot = $(this).next().offset().top
-
-                    $('html, body').animate({scrollTop: next_ot}, 800)
-                    return false;
-                }
-
-                
                 let number1 = document.getElementById("g_num1");
                 let counter1 = 0;
                 setInterval(() => {
@@ -403,6 +396,23 @@
                     }
                 }, 50);
 
+                if( $('html, body').is(':animated') ){
+                    return false;
+                }
+
+                if(delta > 0){
+                    
+                    let prev_ot = $(this).prev().offset().top
+
+                    $('html, body').animate({scrollTop: prev_ot}, 400)
+                    return false;
+
+                } else if(delta < 0){
+                    let next_ot = $(this).next().offset().top
+
+                    $('html, body').animate({scrollTop: next_ot}, 800)
+                    return false;
+                }
                 
 
             })
