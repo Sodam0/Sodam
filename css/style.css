@@ -240,6 +240,16 @@
         font-size: 3.2rem;
         margin-bottom: 30px;
     }
+    
+    .sec2_wrap h3::after{
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0px 0px 0px 10px;
+        border-radius: 9px;
+        background-color: #8577ff;
+    }
 
     .sec2_wrap img{
         margin-left: 4%;
@@ -337,12 +347,6 @@
         margin: 0 auto;
         
     }
-
-    /* .sec3_wrap{
-        width: 100%;
-        /* border: 1px solid #555; */
-        /* text-align: center;
-    } */
     
     .s3_title {
         font-size: 3.2rem;
@@ -361,6 +365,30 @@
 
     .sec3_s:hover{
         background: #eee;
+    }
+
+    canvas {
+        display: block;
+        vertical-align: bottom;
+    }
+    #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+      
+    #stats,
+      .count-particles{
+        -webkit-user-select: none;
+    }
+      
+    #stats{
+        border-radius: 3px 3px 0 0;
+        overflow: hidden;
+    }
+      
+    .count-particles{
+        border-radius: 0 0 3px 3px;
     }
 
     /* sec4 */
