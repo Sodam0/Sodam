@@ -155,7 +155,7 @@ a:nth-of-type(4) .card_wrapper {
 }
   
 .project_summary {
-    height: 24vh;
+    height: 26vh;
     margin-top: 200px;
     position: relative;
     padding: 0 20px;
@@ -173,7 +173,7 @@ a:nth-of-type(4) .card_wrapper {
     font-size: 1.4rem;
     color: #8577ff;
 }
-  
+
 .created_date {
     margin: 10px 0;
     color: #8A8EA0;
@@ -181,7 +181,9 @@ a:nth-of-type(4) .card_wrapper {
   
 .project_desc {
     margin: 0;
-    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 2.0rem;
+    font-weight: 400;
     width: 100%;
 }
 

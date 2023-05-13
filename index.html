@@ -36,18 +36,15 @@
                     <!-- 01 -->
                     <li>
                         <a href="#section2">Skill</a>
-                        <ul class="lnb">
-                            <li><a href="#">준비중</a></li>
-                            <li><a href="#">준비중</a></li>
-                        </ul>
                     </li>
                     <!-- 02 -->
                     <li>
                         <a href="#section3">Works</a>
                         <ul class="lnb">
                             <li><a href="#">Portpolio</a></li>
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Chart</a></li>
+                            <li><a href="http://sodadam.dothome.co.kr/">Todo List</a></li>
+                            <li><a href="#">Todo List</a></li>
+                            <li><a href="/designpage.html">Design</a></li>
                         </ul>
                     </li>
                     <!-- 03 -->
@@ -188,6 +185,7 @@
      id="section3">
         <div class="sec3_wrap" data-aos="fade-up">
             <h3 class="s3_title" data-aos="fade-up">My Skills</h3>
+            <br>
             <div class="container" data-aos="fade-left" data-aos-duration="1000">
                 <div class="card" data-aos="fade-left">
                     <div class="face face1">
@@ -258,7 +256,7 @@
                     <div class="project_summary">
                         <h2 class="project_title">Dam Portpolio</h2>
                         <p class="created_date">Created: 2023 / 05</p>
-                        <p class="project_desc">Minimalistic website showing Idaho's famous golden potatoes.</p>
+                        <p class="project_desc">Jquery와 JS로 페이지 이동과 메뉴 애니매이션을 추가하였으며 메인 홈화면에 Canvas three.js를 이용한 그래픽을 추가하였습니다. 또한 반응형 웹페이지로 모바일이나 타블렛에서도 최적화되도록 제작하였습니다.</p>
                     </div>
                 </article>
             </a><!-- 포폴 -->
@@ -267,7 +265,7 @@
                     <div class="project_summary">
                         <h2 class="project_title">Neumorphism Todo List</h2>
                         <p class="created_date">Created: 2023 / 04</p>
-                        <p class="project_desc">Minimalistic website showing Idaho's famous golden potatoes.</p>
+                        <p class="project_desc">최근 디자인 트렌드인 뉴모피즘 디자인을 테마로 하여 사용자가 입력하여 저장된 데이터를 출력하는 Todo List 개인 프로젝트입니다. Vue Vite를 통해 빌드하였습니다.</p>
                     </div>
                 </article>
             </a><!-- 프로젝트 1 -->
@@ -298,8 +296,8 @@
             <footer>
                 <h2>Contact</h2>
                 <img src="/image/SDY_3d.png" alt="">
-                <h3><strong>Email : </strong>oas12@naver.com</h3>
-                <h3><strong>Tel : </strong>010-3894-9412</h3>
+                <h3><strong>Email : </strong><span id="copy_e">oas12@naver.com <input type="button" onclick="copyE()"></span></h3>
+                <h3><strong>Tel : </strong><span id="copy_t">010-3894-9412</span> <input type="button" onclick="copyT()"></h3>
                 <p>@2023 Dam Portpolio</p>
             </footer>
         </div>
@@ -429,6 +427,8 @@
 
             })
 
+            
+
             // menu slide
             $('.lnb').hide();
             $('.gnb > li').hover(function(){    
@@ -443,6 +443,62 @@
 
         })
         
+    </script>
+    <!-- contact -->
+    <script>
+
+        function copyE() {
+
+            var obj = document.getElementById("copy_e");
+
+            var range = document.createRange();
+
+            range.selectNode(obj.childNodes[0]);
+
+            // range.setStart(obj.childNodes[0], 0);
+
+            // range.setEnd(obj.childNodes[0], 5);
+
+            var sel = window.getSelection();
+
+            sel.removeAllRanges();
+
+            sel.addRange(range); 
+
+            document.execCommand("copy");
+
+            sel.removeRange(range);
+
+            alert('복사되었습니다.)');
+
+        }
+
+        function copyT() {
+
+            var obj = document.getElementById("copy_t");
+
+            var range = document.createRange();
+
+            range.selectNode(obj.childNodes[0]);
+
+            // range.setStart(obj.childNodes[0], 0);
+
+            // range.setEnd(obj.childNodes[0], 5);
+
+            var sel = window.getSelection();
+
+            sel.removeAllRanges();
+
+            sel.addRange(range); 
+
+            document.execCommand("copy");
+
+            sel.removeRange(range);
+
+            alert('복사되었습니다.)');
+
+        }
+
     </script>
 </body>
 </html>
