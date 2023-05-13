@@ -111,7 +111,8 @@
 .card .face.face2 a{
     margin:20px 0;
     display:inline-block;
-    border:1px solid #fff;
+    border:2px solid #fff;
+    border-radius: 5px;
     color:#fff;
     text-decoration:none;
     font-weight:900;
@@ -151,7 +152,7 @@ a:nth-of-type(3) .card_wrapper {
 }
   
 a:nth-of-type(4) .card_wrapper {
-    background-image: url("https://cdn.dribbble.com/users/25514/screenshots/2595669/payment_plans_illustrations_ramotion.png");
+    background-image: url(/image/최종\ 제아페\ 판넬.jpg);
 }
   
 .project_summary {
