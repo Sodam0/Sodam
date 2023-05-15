@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 1024px) { 
 
     html, body{
         font-family: 'Noto Sans KR',
@@ -7,7 +7,7 @@
         font-size: 62.5%;
         line-height: 1.285;
         width: 100%;
-        overflow-x: hidden;
+        overflow: visible;
     }
 
     .menu{
@@ -25,7 +25,7 @@
 
     .menu{
         position: fixed;
-        width: 100vw;
+        width: 100%;
         height: 80px;
         top: 0; left: 0;
         z-index: 50;
@@ -265,6 +265,7 @@
 
     .section{
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -273,6 +274,7 @@
 
     /* sec1 */
     .section1{
+        position: relative;
         justify-content: center;
         align-items: center;
         max-height: 100vh;
@@ -287,7 +289,6 @@
     }
 
     .sec1_text{
-        border: 1px solid red;
         text-align: center;
     }
     
@@ -357,6 +358,7 @@
     /* sec2 */
 
     .section2{
+        position: relative;
         justify-content: center;
         align-items: center;
         width: 85%;
@@ -364,7 +366,6 @@
     }
 
     .sec2_wrap{
-        border: 1px solid red;
         margin: 0 auto;
         width: 100%;
     }
@@ -564,6 +565,55 @@
         margin-top: 90px;
         color: #777;
         bottom: 0%;
+    }
+
+    /* design */
+    .design_sec{
+        width: 100%;
+        height: 100%;
+        background: #1c1b1f;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .D_wrap{
+        position: relative;
+        display: block;
+        margin: auto;
+        width: 80%;
+        height: 80%;
+        transform: translateY(15%);
+    }
+    
+    .design_sec h3{
+        text-align: center;
+        font-size: 2.8rem;
+    }
+
+    .design_sec h3:after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0px 0px 0px 10px;
+        border-radius: 9px;
+        background-color: #8577ff;
+    }
+
+    .design_sec button{
+        display: block;
+        width: 80%;
+        height: 80px;
+        margin: 40px auto;
+        border-radius: 50px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #fff;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: 'Noto Sans KR',
+        sans-serif;
     }
 
 }
