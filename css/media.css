@@ -356,13 +356,17 @@
     .section2{
         justify-content: center;
         align-items: center;
-        width: 80%;
-        margin: 0 auto;
+        width: 85%;
+        margin: 10px auto;
+    }
+
+    .sec2_wrap{
+        width: 100%;
     }
 
     .sec2_wrap h3 {
         font-size: 3.5em;
-        margin-bottom: 30px;
+        margin-top: 50px;
     }    
     .sec2_wrap h3::after{
         content: "";
@@ -385,17 +389,101 @@
 
     .profile_Main{
         display: inline-block;
-        width: 30%;
+        width: 40%;
         margin: 10px;
-        /* border: 1px solid red; */
     }
 
+    .profile_Main p{
+        color: #444;
+        font-size: 1.1rem;
+        line-height: 18px;
+    }
+
+    .p_Name h4{
+        color: #8577ff;
+        font-size: 1.8rem;
+        margin: 10px 0 10px 0;
+    }
+
+    .profile_text{
+        font-size: 1.1rem;
+        line-height: 18px;
+        margin: 10px 0 10px 0;
+    }
+
+    .p_my{
+        display: inline-block;
+        padding: 10px
+    }
+
+    .p_my h4{
+        color: #444;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .p_my strong{
+        margin-right: 15px;
+    }
+
+    
+
+    /* sec3 */
+
     .section3{
-        visibility: hidden;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        margin: 0 auto;
     }
+
+    .sec3_wrap{
+        width: 100%;
+    }
+
+    .s3_title {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        /* line-height: 3.7rem; */
+    }
+
+    .s3_title:after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin: 0px 0px 0px 10px;
+        border-radius: 9px;
+        background-color: #8577ff;
+    }
+
+
     .section4{
-        visibility: hidden;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        margin: 0 auto;
     }
+
+    .s4_title{
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+
+    .s4_title:after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin: 0px 0px 0px 10px;
+        border-radius: 9px;
+        background-color: #8577ff;
+    }
+
+    .sec4_wrap{
+        width: 100%;
+    }
+
     .section5{
         visibility: hidden;
     }

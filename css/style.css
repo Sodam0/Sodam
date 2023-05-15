@@ -369,30 +369,6 @@
         background: #eee;
     }
 
-    canvas {
-        display: block;
-        vertical-align: bottom;
-    }
-    #particles-js {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-      
-    #stats,
-      .count-particles{
-        -webkit-user-select: none;
-    }
-      
-    #stats{
-        border-radius: 3px 3px 0 0;
-        overflow: hidden;
-    }
-      
-    .count-particles{
-        border-radius: 0 0 3px 3px;
-    }
-
     /* sec4 */
     .section4{
         justify-content: center;

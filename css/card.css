@@ -1,195 +1,390 @@
-/* 스킬 카드 */
+@media (min-width: 788px) {
+    /* 스킬 카드 */
 
-.container{
-    margin-top: 30px;
-    position:relative;
-    width:1100px;
-    height: 450px;
-    display:flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content:space-evenly;
+    .container{
+        margin-top: 30px;
+        position:relative;
+        width:1100px;
+        height: 450px;
+        display:flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content:space-evenly;
+    }
+    
+    .card .face{
+        height:300px;
+        width:240px;
+        transition:0.8s;
+        margin: 0 20px 0 20px;
+    }
+    
+    .card .face.face1{
+        position:relative;
+        background:#444;
+        display:flex;
+        justify-content:center;
+        border-radius: 20px;
+        align-items:center;
+        z-index:1;
+        transform:translateY(100px);
+    }
+    
+    
+    .card:hover .face.face1{
+        background:#f71f1f;
+        height: 110px;
+        transform:translateY(30px);
+        .scroll{
+            visibility: hidden;
+        };
+    }
+    .card:nth-child(2):hover .face.face1{
+        background:#2f90ff;
+        height: 110px;
+        transform:translateY(30px);
+    }
+    .card:nth-child(3):hover .face.face1{
+        background:#18d394;
+        height: 110px;
+        transform:translateY(30px);
+    }
+    .card:nth-child(4):hover .face.face1{
+        background:#8577ff;
+        height: 110px;
+        transform:translateY(30px);
+    }
+    
+    .card .face.face1 .content{
+        transition:0.7s;
+    }
+    
+    .card .face.face1 .content h3{
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.4rem;
+        color:#fff;
+        text-align:center;
+    }
+
+    .card .face.face1 .content h3 span{
+        font-size: 1.8rem;
+    }
+    
+    .card:hover .face.face1 .content{
+        opacity:1;
+    }
+    
+    .card .face.face2{
+        height: 240px;
+        position:relative;
+        background:#503232;
+        padding: 30px;
+        display:flex;
+        justify-content:center;
+        box-sizing:border-box;
+        border-radius: 0 0px 20px 20px;
+        box-shadow:0 20px 20px rgba(0,0,0,0.3);
+        transform:translateY(-150px);
+    }
+
+    .card:nth-child(2) .face.face2{
+        background:#324050;
+    }
+    .card:nth-child(3) .face.face2{
+        background:#32504b;
+    }
+    .card:nth-child(4) .face.face2{
+        background:#353250;
+    }
+    
+    .card:hover .face.face2{
+        transform:translateY(10px);
+    }
+    
+    .card .face.face2 p{
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+        padding:0;
+        margin:0;
+    }
+    
+    .card .face.face2 a{
+        margin:20px 0;
+        display:inline-block;
+        border:2px solid #fff;
+        border-radius: 5px;
+        color:#fff;
+        text-decoration:none;
+        font-weight:900;
+        padding:5px;
+        transition:0.5s;
+    }
+    
+    .card .face.face2 a:hover{
+        background:#333;
+        color:#fff;
+    }
+
+    /* 프로젝트 카드 */
+    
+    .card_wrapper {
+        width: 250px;
+        transition: transform 0.5s;
+        position: relative;
+        height: 320px;
+        border-radius: 8px;
+        background: #E4F2F9;
+        display: inline-flex;
+        /* flex-direction: row; */
+        margin: 20px;
+        background-image: url("/image/todolist\ screenshot.png");
+        /* background-position: center; */
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    a:nth-child(2) .card_wrapper {
+        background-image: url("/image/portpolio\ screenshot.png");
+    }
+    
+    a:nth-of-type(3) .card_wrapper {
+        background-image: url("https://cdn.dribbble.com/users/33073/screenshots/2425824/800.png");
+    }
+    
+    a:nth-of-type(4) .card_wrapper {
+        background-image: url(/image/최종\ 제아페\ 판넬.jpg);
+    }
+    
+    .project_summary {
+        height: 28vh;
+        margin-top: 200px;
+        position: relative;
+        padding: 0 20px;
+        background: #fff;
+        border: 1.5px solid #ddd;
+        flex: 1;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }
+    
+    .project_title {
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 0;
+        padding-top: 15px;
+        font-size: 1.4rem;
+        color: #8577ff;
+    }
+
+    .created_date {
+        margin: 10px 0;
+        color: #8A8EA0;
+    }
+    
+    .project_desc {
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 2.0rem;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    
+    a:hover .card_wrapper {
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.09);
+        transform: scale3d(1.008, 1.008, 1);
+    }
 }
-  
-.card .face{
-    height:300px;
-    width:240px;
-    transition:0.6s;
-    margin: 0 20px 0 20px;
-}
-  
-.card .face.face1{
-    position:relative;
-    background:#444;
-    display:flex;
-    justify-content:center;
-    border-radius: 20px;
-    align-items:center;
-    z-index:1;
-    transform:translateY(100px);
-}
-  
-  
-.card:hover .face.face1{
-    background:#f71f1f;
-    height: 110px;
-    transform:translateY(30px);
-    .scroll{
+
+
+@media screen and (max-width: 788px) { 
+
+    .container{
+        margin-top: 30px;
+        position:relative;
+        width:100%;
+        display:flex;
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+        justify-content:space-evenly;
+    }
+      
+    .card .face{
+        position: relative;
+        height:100px;
+        width:220px;
+        transition:0.8s;
+        margin: 10px auto;
+    }
+      
+    .card .face.face1{
+        position: absolute;
+        background:#444;
+        display:flex;
+        justify-content:center;
+        border-radius: 20px;
+        align-items:center;
+        z-index:1;
+        transform:translateX(0px);
+    }
+
+    .card .face.face1 .scroll{
         visibility: hidden;
-    };
-}
-.card:nth-child(2):hover .face.face1{
-    background:#2f90ff;
-    height: 110px;
-    transform:translateY(30px);
-}
-.card:nth-child(3):hover .face.face1{
-    background:#16d394;
-    height: 110px;
-    transform:translateY(30px);
-}
-.card:nth-child(4):hover .face.face1{
-    background:#8577ff;
-    height: 110px;
-    transform:translateY(30px);
-}
-  
-.card .face.face1 .content{
-    transition:0.7s;
-}
-  
-.card .face.face1 .content h3{
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.4rem;
-    color:#fff;
-    text-align:center;
-}
+    }
+      
+      
+    .card:hover .face.face1{
+        background:#f71f1f;
+        width: 40px;
+        transform:translateX(-20px);
 
-.card .face.face1 .content h3 span{
-    font-size: 1.8rem;
-}
-  
-.card:hover .face.face1 .content{
-    opacity:1;
-}
-  
-.card .face.face2{
-    height: 240px;
-    position:relative;
-    background:#503232;
-    padding: 30px;
-    display:flex;
-    justify-content:center;
-    box-sizing:border-box;
-    border-radius: 0 0px 20px 20px;
-    box-shadow:0 20px 20px rgba(0,0,0,0.3);
-    transform:translateY(-150px);
-}
+    }
+    .card:nth-child(2):hover .face.face1{
+        background:#2f90ff;
+        width: 40px;
+    }
+    .card:nth-child(3):hover .face.face1{
+        background:#18d394;
+        width: 40px;
+    }
+    .card:nth-child(4):hover .face.face1{
+        background:#8577ff;
+        width: 40px;
+    }
+      
+    .card .face.face1 .content{
+        transition:0.7s;
+    }
+      
+    .card .face.face1 .content h3{
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem;
+        color:#fff;
+        text-align:center;
+    }
+    
+    .card .face.face1 .content h3 span{
+        font-size: 1.8rem;
+    }
+      
+    .card:hover .face.face1 .content{
+        opacity:0;
+    }
+      
+    .card .face.face2{
+        width:220px;
+        height: 100px;
+        background:#503232;
+        display:flex;
+        justify-content:center;
+        box-sizing:border-box;
+        border-radius: 20px;
+        box-shadow:0 10px 10px rgba(0,0,0,0.3);
+        transform:translateX(0px);
+    }
+    
+    .card:nth-child(2) .face.face2{
+        background:#324050;
+    }
+    .card:nth-child(3) .face.face2{
+        background:#32504b;
+    }
+    .card:nth-child(4) .face.face2{
+        background:#353250;
+    }
+      
+    .card:hover .face.face2{
+        width:240px;
+        transform:translateX(10px);
+    }
+      
+    .card .face.face2 p{
+        color: #fff;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        padding:15px 15px 15px 20px;
+        margin:0;
+        visibility: hidden;
+    }
 
-.card:nth-child(2) .face.face2{
-    background:#324050;
-}
-.card:nth-child(3) .face.face2{
-    background:#32504b;
-}
-.card:nth-child(4) .face.face2{
-    background:#353250;
-}
-  
-.card:hover .face.face2{
-    transform:translateY(10px);
-}
-  
-.card .face.face2 p{
-    color: #fff;
-    font-size: 1.2rem;
-    line-height: 2.4rem;
-    padding:0;
-    margin:0;
-}
-  
-.card .face.face2 a{
-    margin:20px 0;
-    display:inline-block;
-    border:2px solid #fff;
-    border-radius: 5px;
-    color:#fff;
-    text-decoration:none;
-    font-weight:900;
-    padding:5px;
-    transition:0.5s;
-}
-  
-.card .face.face2 a:hover{
-    background:#333;
-    color:#fff;
-}
+    .card:hover .face.face2 p{
+        visibility: visible;
+    }
+      
+    .card .face.face2 a{
+        display: none;
+    }
+      
+    .card .face.face2 a:hover{
+        background:#333;
+        color:#fff;
+    }
 
-/* 프로젝트 카드 */
-  
-.card_wrapper {
-    width: 250px;
-    transition: transform 0.5s;
-    position: relative;
-    height: 320px;
-    border-radius: 6px;
-    background: #E4F2F9;
-    display: inline-flex;
-    /* flex-direction: row; */
-    margin: 20px;
-    background-image: url("/image/todolist\ screenshot.png");
-    /* background-position: center; */
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-  
-a:nth-child(2) .card_wrapper {
-    background-image: url("/image/portpolio\ screenshot.png");
-}
-  
-a:nth-of-type(3) .card_wrapper {
-    background-image: url("https://cdn.dribbble.com/users/33073/screenshots/2425824/800.png");
-}
-  
-a:nth-of-type(4) .card_wrapper {
-    background-image: url(/image/최종\ 제아페\ 판넬.jpg);
-}
-  
-.project_summary {
-    height: 26vh;
-    margin-top: 200px;
-    position: relative;
-    padding: 0 20px;
-    background: #fff;
-    border: 1.5px solid #ddd;
-    flex: 1;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
-}
-  
-.project_title {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 0;
-    padding-top: 15px;
-    font-size: 1.4rem;
-    color: #8577ff;
-}
+        /* 프로젝트 카드 */
+    
+        .card_wrapper {
+            width: 100%;
+            transition: transform 0.5s;
+            position: relative;
+            height: 18vh;
+            border-radius: 8px;
+            background: #E4F2F9;
+            display: inline-block;
+            margin: 5px auto;
+            background-image: url("/image/todolist\ screenshot.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        a:nth-child(2) .card_wrapper {
+            background-image: url("/image/portpolio\ screenshot.png");
+        }
+        
+        a:nth-of-type(3) .card_wrapper {
+            background-image: url("https://cdn.dribbble.com/users/33073/screenshots/2425824/800.png");
+        }
+        
+        a:nth-of-type(4) .card_wrapper {
+            background-image: url(/image/최종\ 제아페\ 판넬.jpg);
+        }
+        
+        .project_summary {
+            margin-left: 100px;
+            height: 18vh;
+            padding: 0 10px;
+            background: #fff;
+            border: 1.5px solid #ddd;
+            flex: 1;
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+        }
+        
+        .project_title {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0;
+            padding-top: 10px;
+            font-size: 1.3rem;
+            color: #8577ff;
+        }
+    
+        .created_date {
+            margin: 5px 0;
+            color: #8A8EA0;
+        }
+        
+        .project_desc {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            width: 100%;
+        }
+    
+        
+        a:hover .card_wrapper {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.09);
+            transform: scale3d(1.008, 1.008, 1);
+        }
 
-.created_date {
-    margin: 10px 0;
-    color: #8A8EA0;
-}
-  
-.project_desc {
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 2.0rem;
-    font-weight: 400;
-    width: 100%;
-}
-
-  
-a:hover .card_wrapper {
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.09);
-    transform: scale3d(1.008, 1.008, 1);
 }
